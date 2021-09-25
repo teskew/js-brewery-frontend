@@ -1,6 +1,6 @@
 class Order{
     static all = []
-    static
+    static cont = document.getElementById("orders-cont")
     constructor({name, id, amount, price, company_id, company}){
        this.name = name
        this.id = id
@@ -15,17 +15,18 @@ class Order{
        //debugger
     }
     render(){
-        return this.element.innerHTML = `
+         this.element.innerHTML = `
         <div data-id="${this.id}">
         <h2 class="name">${this.name}</h2>
         <h2 class="amount">${this.amount}</h2>
         <h2 class="price">${this.price}</h2>
         </div>
         `
-       
+       return this.element
     }
      
     attachToDom(){
        
+      Order.cont.appendChild(this.render()) 
     }
 }
