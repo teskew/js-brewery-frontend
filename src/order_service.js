@@ -6,6 +6,13 @@ class OrderService {
       getOrders(){
           fetch(this.port + `/orders`)
           .then(response => response.json())
-          .then(data => console.log(data))
+          .then(data => {
+              for(const order of data){
+                 let c = new Order(order)
+                 c.attachToDom()
+
+              }
+          })
+          .catch()
       }
 }

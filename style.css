@@ -1,6 +1,43 @@
 
 
 
+/* body{
+    background-image: url(FreeVector-Fresh-Beer.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    -wekit-background-attachment: fixed;
+    -o-background-attachment: fixed;
+    -moz-background-attachment: fixed;
+}
+.text{
+    text-align:center;
+}
+img{
+    margin-top:10%
+}
+.info{
+    margin-top: 5%;
+}
+div p{
+    font-size:5vw;
+    color:#996633;
+}
+
+
+@media only screen and (max-width: 500px){
+    .text img{
+        width:100%;
+    }
+    img{
+    margin-top:50%
+    }
+    .info{
+        margin-top: 10%;
+    }   
+}
+ */
+
 body {
     background-color: #ffcc00;
 
