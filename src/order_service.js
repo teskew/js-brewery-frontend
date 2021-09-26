@@ -15,4 +15,21 @@ class OrderService {
           })
           .catch()
       }
+      createOrders(){
+       const orderInfo = {
+          order: {
+              name: nameValue.value,
+              amount: amountValue.value,
+              price: priceValue.volue,
+              company_id: company_id.value
+           }
+          }
+      fetch (this.port + `/orders, `)
+      .then(response => response.jason())
+      .then(data => {
+        const c = new Order(data)
+        c.attachToDom()
+      })
+    }
+      
 }

@@ -25,8 +25,7 @@ class Order{
        return this.element
     }
      
-    attachToDom(){
-       
+      attachToDom(){ 
       Order.cont.appendChild(this.render()) 
     }
 }
