@@ -1,7 +1,7 @@
 class Order{
     static all = []
     static cont = document.getElementById("orders-cont")
-    constructor({name, id, amount, price, company_id, company}){
+    constructor({name, id, amount, price, company_id, company }){
        this.name = name
        this.id = id
        this.amount = amount
@@ -11,6 +11,7 @@ class Order{
        this.element = document.createElement('li');
        this.element.dataset['id'] = id;
        this.element.id = `order-${id}`;
+       this.element.addEventListener('click', this.handleClick);
        Order.all.push(this)
        //debugger
     }
@@ -22,8 +23,9 @@ class Order{
         <h2 class="price">${this.price}</h2>
         </div>
         `
-       return this.element
+      return this.element
     }
+
      
       attachToDom(){ 
       Order.cont.appendChild(this.render()) 

@@ -4,12 +4,12 @@ class OrderService {
 
     }
       getOrders(){
-          fetch(this.port + `/orders`)
+        fetch(this.port + `/orders`)
           .then(response => response.json())
           .then(data => {
-              for(const order of data){
-                 let c = new Order(order)
-                 c.attachToDom()
+            for(const order of data){
+                 let o = new Order(order)
+                      o.attachToDom()
 
               }
           })
@@ -20,16 +20,16 @@ class OrderService {
           order: {
               name: nameValue.value,
               amount: amountValue.value,
-              price: priceValue.volue,
+              price: priceValue.value,
               company_id: company_id.value
            }
           }
-      fetch (this.port + `/orders, `)
-      .then(response => response.jason())
-      .then(data => {
-        const c = new Order(data)
-        c.attachToDom()
-      })
+          fetch(this.port + `/orders`)
+          .then(response => response.json())
+          .then(data => {
+              const o = new Order(data)
+              o.attachToDom()
+          })
     }
       
 }
