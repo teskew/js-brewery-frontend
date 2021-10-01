@@ -1,5 +1,5 @@
 class Order{
-    static all = []
+    static all = [];
     static cont = document.getElementById("orders-cont")
     constructor({name, id, amount, price, company_id, company }){
        this.name = name

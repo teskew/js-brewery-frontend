@@ -1,6 +1,6 @@
 
 class Company{   
- constructor({name, brewery_type, city, phone,  website_url, id, orders}){
+ constructor({name, brewery_type, city, phone, website_url, id, orders}){
 
 this.name = name
 this.brewery_type = brewery_type
@@ -15,7 +15,7 @@ addToDropDown(){
     const option = document.createElement('option');
     option.value = this.id;
     option.innerText = this.name;
-     dropDown.appendChild(option)
+    dropDown.appendChild(option)
    
 }
 }

@@ -13,6 +13,6 @@ form.addEventListener('submit', handleSubmit)
 
 function handleSubmit(e){
     e.preventDefult();
-    orderCall.creatOrders()
+    orderCall.createOrders()
    
 }

@@ -21,15 +21,24 @@ class OrderService {
               name: nameValue.value,
               amount: amountValue.value,
               price: priceValue.value,
-              company_id: company_id.value
+              company_id: dropDown.value
            }
           }
-          fetch(this.port + `/orders`)
+          const configObject = {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+            },
+            body: JSON.stringify(orderInfo)
+        }
+
+          fetch(this.port + `/orders`, configObject)
           .then(response => response.json())
           .then(data => {
-              const o = new Order(data)
-              o.attachToDom()
-          })
+            const o = new Order(data)
+            o.attachToDom()
+        })
     }
       
 }
