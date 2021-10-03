@@ -21,6 +21,7 @@ class Order{
         <h2 class="name">${this.name}</h2>
         <h2 class="amount">${this.amount}</h2>
         <h2 class="price">${this.price}</h2>
+        
         </div>
         `
       return this.element
@@ -28,6 +29,7 @@ class Order{
 
      
       attachToDom(){ 
+    
       Order.cont.appendChild(this.render()) 
     }
 }

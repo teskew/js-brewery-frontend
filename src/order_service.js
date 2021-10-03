@@ -1,8 +1,8 @@
 class OrderService {
     constructor(port){
           this.port = port
-
     }
+
       getOrders(){
         fetch(this.port + `/orders`)
           .then(response => response.json())
@@ -15,7 +15,9 @@ class OrderService {
           })
           .catch()
       }
+
       createOrders(){
+        //debugger
        const orderInfo = {
           order: {
               name: nameValue.value,
@@ -33,11 +35,11 @@ class OrderService {
             body: JSON.stringify(orderInfo)
         }
 
-          fetch(this.port + `/orders`, configObject)
-          .then(response => response.json())
-          .then(data => {
-            const o = new Order(data)
-            o.attachToDom()
+        fetch(this.port + `/orders`, configObject)
+        .then(response => response.json())
+        .then(data => {
+            const c = new Order(data)
+            c.attachToDom()
         })
     }
       

@@ -7,11 +7,12 @@ class CompanyService{
         fetch(`${this.port}/companies`)
         .then(response => response.json())
         .then( json => {
+            //debugger
             json.forEach(element => {
-                 //debugger
+                 
                 const c = new Company(element)
-             
-                 c.addToDropDown()
+                //debugger
+                c.addToDropDown()
               
             })
         })
