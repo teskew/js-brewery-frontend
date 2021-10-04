@@ -61,21 +61,16 @@ class OrderService {
       }
       // debugger
       fetch(`${this.port}/orders/${id}`, configObject)
-      .then( order.render() )
-      .then(data => {
-         // const o = new Order(data)
-          order.render()
-      })
-
+      .then(order.render() )
   }
 
   deleteOrder(e){
-      // debugger
-      const id = e.target.dataset.id
+      
+     const id = e.target.dataset.id
       e.target.parentElement.remove()
-      // fetch(`${this.port}/orders/${id}`, {method: 'DELETE'})
-      // .then(response => response.json())
-      // .then(json => alert(json.message))
+      fetch(`${this.port}/orders/${id}`, {method: 'DELETE'})
+      .then(response => response.json())
+      .then(json => alert(json.message))
   }
 
  
