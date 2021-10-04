@@ -38,9 +38,45 @@ class OrderService {
         fetch(this.port + `/orders`, configObject)
         .then(response => response.json())
         .then(data => {
-            const c = new Order(data)
-            c.attachToDom()
+            const o = new Order(data)
+            o.attachToDom()
         })
     }
-      
+    updateOrder(order){
+      //debugger
+      const {name, amount, price, id} = order
+      const orderInfo = {
+          name, 
+          amount,
+          price
+      }
+
+      const configObject = {
+          method: 'PATCH',
+          headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json"
+          },
+          body: JSON.stringify(orderInfo)
+      }
+      // debugger
+      fetch(this.port + `/orders`, configObject)
+      .then(response => response.json())
+      .then(data => {
+          //const o = new Order(data)
+          order.attachToDom()
+      })
+
+  }
+
+  // deleteComment(e){
+  //     // debugger
+  //     const id = e.target.dataset.id
+  //     e.target.parentElement.remove()
+  //     fetch(`${this.port}/comments/${id}`, {method: 'DELETE'})
+  //     .then(response => response.json())
+  //     .then(json => alert(json.message))
+  //}
+
+ 
 }
