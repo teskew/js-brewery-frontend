@@ -60,23 +60,23 @@ class OrderService {
           body: JSON.stringify(orderInfo)
       }
       // debugger
-      fetch(this.port + `/orders`, configObject)
-      .then(response => response.json())
+      fetch(`${this.port}/orders/${id}`, configObject)
+      .then( order.render() )
       .then(data => {
-          //const o = new Order(data)
-          order.attachToDom()
+         // const o = new Order(data)
+          order.render()
       })
 
   }
 
-  // deleteComment(e){
-  //     // debugger
-  //     const id = e.target.dataset.id
-  //     e.target.parentElement.remove()
-  //     fetch(`${this.port}/comments/${id}`, {method: 'DELETE'})
-  //     .then(response => response.json())
-  //     .then(json => alert(json.message))
-  //}
+  deleteOrder(e){
+      // debugger
+      const id = e.target.dataset.id
+      e.target.parentElement.remove()
+      // fetch(`${this.port}/orders/${id}`, {method: 'DELETE'})
+      // .then(response => response.json())
+      // .then(json => alert(json.message))
+  }
 
  
 }

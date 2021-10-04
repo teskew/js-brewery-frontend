@@ -57,7 +57,7 @@ class Order{
            // debugger
       }else if(e.target.innerText === "X"){
            console.log(e.target)
-          // orderCall.deleteOrder(e)
+           orderCall.deleteOrder(e)
       }else if(e.target.innerText === "Save Order"){
            console.log("save works")
            e.target.innerText = "Edit Order"
