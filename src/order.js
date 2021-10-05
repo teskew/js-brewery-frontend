@@ -15,13 +15,29 @@ class Order{
        Order.all.push(this)
        //debugger
     }
+    // static filteredByOrder(filteredCompany){
+    //   if(filteredCompany){
+    //   for(const i of Order.all){
+    //       if(i.companyId === parseInt(filteredCompany.id)){
+    //           i.element.style.display = ""
+    //       }else{
+    //          i.element.style.display = "none" 
+    //       }
+    //   }
+  // }else{
+  //     for(const i of Order.all){
+  //         i.element.style.display = ""
+  //     }
+  // }
+  //   }
+      // debugger
     render(){
          this.element.innerHTML = `
         
         <div data-id="${this.id}">
-       Name: <span class="name">${this.name}</span>
-       Amount: <span class="amount">${this.amount}</span>
-        Price: $<span class="price">${this.price}</span>
+       Name: <span class="name">${this.name} </span>
+       Amount: <span class="amount">${this.amount} </span>
+        Price: $<span class="price">${this.price} </span>
         </div>
         <button class="edit" data-id=${this.id}>Edit Order</button>
         <button class="delete" data-id=${this.id}>X</button>

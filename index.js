@@ -17,6 +17,7 @@ form.addEventListener('submit', handleSubmit)
 function handleSubmit(e){
     e.preventDefault();
     orderCall.createOrders()
+    e.target.reset()
     //debugger
    
 }

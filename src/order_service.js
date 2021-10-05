@@ -10,7 +10,6 @@ class OrderService {
             for(const order of data){
                  let o = new Order(order)
                       o.attachToDom()
-
               }
           })
           .catch()
