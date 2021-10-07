@@ -6,13 +6,16 @@ class CompanyService{
     getCompanies(){
         fetch(`${this.port}/companies`)
         .then(response => response.json())
-        .then( json => {
+        .then(json => {
             //debugger
-            json.forEach(element => {
-                 
-                const c = new Company(element)
+            json["data"].forEach(element => {
+                // json.forEach(element => {
+                 const c = new Company({id: element.id, ...element.attributes})
+               // const c = new Company(element)
                 //debugger
+                c.addToDom()
                 c.addToDropDown()
+               
               
             })
         })

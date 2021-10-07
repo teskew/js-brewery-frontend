@@ -2,6 +2,8 @@ const port = `http://localhost:3000`;
 const orderCall = new OrderService(port);
 const companyCall = new CompanyService(port);
 
+ const ordersContainer = document.getElementById("orders-container");
+
 const form = document.getElementById("order-form");
 const dropDown = document.getElementById("company-dropdown");
 

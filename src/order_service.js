@@ -7,12 +7,12 @@ class OrderService {
         fetch(this.port + `/orders`)
           .then(response => response.json())
           .then(data => {
-            for(const order of data){
-                 let o = new Order(order)
+           
+           data["data"].forEach((order) => {
+                  const o = new Order({id: order.id, ...order.attributes})
                       o.attachToDom()
-              }
-          })
-          .catch()
+              })
+          })   
       }
 
       createOrders(){
@@ -65,12 +65,12 @@ class OrderService {
 
   deleteOrder(e){
       
-     const id = e.target.dataset.id
+      const id = e.target.dataset.id
       e.target.parentElement.remove()
       fetch(`${this.port}/orders/${id}`, {method: 'DELETE'})
       .then(response => response.json())
       .then(json => alert(json.message))
   }
 
- 
 }
+

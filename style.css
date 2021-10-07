@@ -1,8 +1,8 @@
 
 
 
-html {
-    background: linear-gradient(200deg, rgb(138, 249, 199), rgb(87, 228, 249));
+ html {
+    background: linear-gradient(200deg, rgb(245, 238, 53), hsl(58, 87%, 56%));
     background-size: 600% 600%;
     background-attachment: fixed;
     height: 100%;
@@ -40,7 +40,7 @@ html {
     background-color: white;
     border-radius: 0px 5px 5px 0px;
     border: 1px solid rgb(40, 160, 230);
-    color: rgb(40, 160, 230);
+    color: rgb(15, 40, 23);
     padding: 10px 20px;
     text-align: center;
     display: inline-block;
@@ -68,6 +68,7 @@ html {
   input:focus {
     outline: none;
   }
+
   
   @keyframes TackyGradient {
     0% {
@@ -79,7 +80,9 @@ html {
     100% {
       background-position: 0% 50%;
     }
-  }
+  } 
+
+
 /* body {
     background-color: #ffcc00;
 

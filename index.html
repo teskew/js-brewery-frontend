@@ -16,12 +16,14 @@
 </head>
 <body>
  
-    <h2> Create order</h2>
-     <!-- <h2>Filter by Company:</h2>
+    <h2> Breweries Companies Order</h2>
+     <h2>Filter by Company:</h2>
     <div id="company-container"></div>
     <h2>Here are all the Orders:</h2>
-    <ul id="order-list">
-    </ul>   -->
+    <ul id="orders-container">
+    </ul>  
+    
+    <!-- <div id="orders-container"></div> -->
     
     <form id="order-form">
             <label for="order-name">Name:</label><br>
@@ -32,15 +34,17 @@
             <input type="number" name="price" id="order-price" min="0" step=".01"><br><br>
             <label for="company-dropdown">Beer Companies:</label>
             <select name="company_id" id="company-dropdown">
-            </select><br>
-            <!-- <input type="text" name="company" id="company-name">
-        <input type="text" name="company" id="company-name">
-        <input type="text" name="company" id="company-name"> -->
+            </select><br></br>
+            <label for="company-name">Company Name:</label>
+            <input type="text" name="company" id="company-name"></br>
+
+        <!-- <input type="text" name="company" id="company-name">
+        <input type="text" name="company" id="company-name">  -->
             <input type="submit" value="Create Order"/>
         </form>
     
-    <div id="companies"></div>
-    <div id="orders-cont"></div>
+  
+    
 </body>
 </html>
 
