@@ -1,28 +1,30 @@
 class OrderService {
-    constructor(port){
+          constructor(port){
           this.port = port
     }
 
       getOrders(){
-        fetch(this.port + `/orders`)
+           fetch(this.port + `/orders`)
           .then(response => response.json())
-          .then(data => {
-           
-           data["data"].forEach((order) => {
-                  const o = new Order({id: order.id, ...order.attributes})
-                      o.attachToDom()
-              })
+          .then(json => {
+            for(const order of json.data) {
+                let o = new Order({id: order.id, ...order.attributes})
+                //debugger
+                 o.attachToDom()
+
+              }
           })   
       }
 
-      createOrders(){
-        //debugger
+    createOrders(){
        const orderInfo = {
           order: {
               name: nameValue.value,
               amount: amountValue.value,
               price: priceValue.value,
-              company_id: dropDown.value
+              company_id: dropDown.value,
+              company_name: comNameValue.value
+              
            }
           }
           const configObject = {
@@ -36,20 +38,31 @@ class OrderService {
 
         fetch(this.port + `/orders`, configObject)
         .then(response => response.json())
-        .then(data => {
-            const o = new Order(data)
+        .then(json => {
+            let o = new Order({id: json.data.id, ...json.data.attributes})
+        
+            const findCom = Company.all.find( c => parseInt(c.id) === o.companyId)
+        
+        if(!findCom) {
+            const comObj = new Company({
+                 id: json.data.attributes.company_id, 
+                 name: json.data.attributes.company_name        
+               
+            })
+              comObj.addToDom()
+              comObj.addToDropDown()
+            }
             o.attachToDom()
         })
     }
+
     updateOrder(order){
-      //debugger
       const {name, amount, price, id} = order
       const orderInfo = {
           name, 
           amount,
           price
       }
-
       const configObject = {
           method: 'PATCH',
           headers: {
@@ -58,13 +71,12 @@ class OrderService {
           },
           body: JSON.stringify(orderInfo)
       }
-      // debugger
       fetch(`${this.port}/orders/${id}`, configObject)
-      .then(order.render() )
-  }
+      .then( order.render() )
+
+       }
 
   deleteOrder(e){
-      
       const id = e.target.dataset.id
       e.target.parentElement.remove()
       fetch(`${this.port}/orders/${id}`, {method: 'DELETE'})

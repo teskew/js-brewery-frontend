@@ -1,17 +1,16 @@
 
 class Company{ 
     static all = []
-    static companyContainer = document.getElementById("company-container")
-
+    static companyContainer = document.getElementById("com-container")
  constructor({name, id, orders}){
-
-this.name = name
-this.id = id
-this.orders = orders
-this.active = false
- this.element = document.createElement('button')
+  this.name = name
+  this.id = id
+  this.orders = orders
+  this.active = false
+  this.element = document.createElement('button')
  Company.all.push(this)
- }
+   }
+
  render(){
     this.element.innerText = this.name 
     this.element.id = `company-${this.id}`

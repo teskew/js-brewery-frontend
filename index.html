@@ -16,35 +16,28 @@
 </head>
 <body>
  
-    <h2> Breweries Companies Order</h2>
+    <h2> Breweries Order App</h2>
      <h2>Filter by Company:</h2>
-    <div id="company-container"></div>
+    <div id="com-container"></div>
     <h2>Here are all the Orders:</h2>
-    <ul id="orders-container">
-    </ul>  
-    
-    <!-- <div id="orders-container"></div> -->
-    
+    <ul id="orders-container"></ul>
+  
     <form id="order-form">
             <label for="order-name">Name:</label><br>
             <input type="text" name="name" id="order-name"/></br>
             <label for="order-amount">Amount:</label><br>
             <input type="number" name="amount" id="order-amount"/></br>
             <label for="order-price">Price:</label><br>
-            <input type="number" name="price" id="order-price" min="0" step=".01"><br><br>
-            <label for="company-dropdown">Beer Companies:</label>
-            <select name="company_id" id="company-dropdown">
-            </select><br></br>
-            <label for="company-name">Company Name:</label>
-            <input type="text" name="company" id="company-name"></br>
+            <input type="number" name="price" id="order-price" min="0" step="0.01"><br><br>
+            
 
-        <!-- <input type="text" name="company" id="company-name">
-        <input type="text" name="company" id="company-name">  -->
+            <label for="company-dropdown">Company Name:</label>
+            <select name="company_id" id="company-dropDown"></select><br/><br/>
+            </select><br></br>
+            <label for="company-Name">Company Name: </label>
+            <input type="text" name="name" id="company-name"/><br/>
             <input type="submit" value="Create Order"/>
         </form>
-    
-  
-    
 </body>
 </html>
 
