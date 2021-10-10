@@ -1,7 +1,7 @@
 
 
 
- html {
+ /* html {
     background: linear-gradient(200deg, rgb(245, 238, 53), hsl(58, 87%, 56%));
     background-size: 600% 600%;
     background-attachment: fixed;
@@ -80,10 +80,16 @@
     100% {
       background-position: 0% 50%;
     }
-  } 
+  } */
 
 
-/* body {
+body {
     background-color: #ffcc00;
 
-} */
+} 
+.activated {
+  background-color:rgb(40, 160, 230);
+  border-radius: 0px 5px 5px 0px;
+  border: 1px solid;
+  color: white;
+}

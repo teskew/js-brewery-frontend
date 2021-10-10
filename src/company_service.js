@@ -8,14 +8,13 @@ class CompanyService{
         .then(response => response.json())
         .then(json => {
           
-            for(const company of json.data)  {
-             let c = new Company({id: company.id, ...company.attributes})
-                     c.addToDom()
+            for(const company of json.data) {
+                const c = new Company({id: company.id, ...company.attributes})
+                    c.addToDom()
                     c.addToDropDown()
                
-              
-            }
-        })
-
+         
+                }
+            })
+        }
     }
-}

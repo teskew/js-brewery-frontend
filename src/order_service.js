@@ -39,9 +39,8 @@ class OrderService {
         fetch(this.port + `/orders`, configObject)
         .then(response => response.json())
         .then(json => {
-            let o = new Order({id: json.data.id, ...json.data.attributes})
-        
-            const findCom = Company.all.find( c => parseInt(c.id) === o.companyId)
+           let o = new Order({id: json.data.id, ...json.data.attributes})
+           const findCom = Company.all.find(c => parseInt(c.id) === o.companyId)
         
         if(!findCom) {
             const comObj = new Company({

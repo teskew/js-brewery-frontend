@@ -3,9 +3,9 @@ const orderCall = new OrderService(port);
 const companyCall = new CompanyService(port);
 const dropDown = document.getElementById("company-dropDown");
  
-const ul = document.getElementById("orders-list");
+const ul = document.getElementById('order-list');
 const form = document.getElementById("order-form");
-// const companyInput = document.getElementById('company-id')
+ //const companyInput = document.getElementById('company-id')
 
 const nameValue = document.getElementById('order-name');
 const amountValue = document.getElementById('order-amount');
@@ -18,7 +18,7 @@ companyCall.getCompanies()
 
 form.addEventListener('submit', handleSubmit)
 
-function handleSubmit(e){
+function handleSubmit(e) {
     e.preventDefault();
     orderCall.createOrders()
     e.target.reset();
