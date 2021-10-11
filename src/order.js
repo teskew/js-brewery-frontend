@@ -33,9 +33,9 @@ class Order{
     render() {
       this.element.innerHTML = `
       <div data-id="${this.id}">
-      <h2 class="name">${this.name}</h2>
-      Amount: <span class="amount">${this.amount}</span>
-      Price: $<span class="price">${this.price}</span>
+      <h3 class="name">${this.name}</h3>
+      Amount: <span class="amount">${this.amount}</span><br/>
+      Price: $<span class="price">${this.price}</span><br/>
       </div>
       <button class="edit" data-id=${this.id}>Edit Order</button>
       <button class="delete" data-id=${this.id}>X</button>

@@ -5,39 +5,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"  href="style.css">
-
+    <link rel="stylesheet" href="style.css">
     <script defer src="src/order.js"></script>
     <script defer src="src/order_service.js"></script>
     <script defer src="src/company.js"></script>
     <script defer src="src/company_service.js"></script>
     <script defer src="index.js"></script>
-    <title>Brewery Companies</title>
+         <title>Brewery Companies</title>
+         
 </head>
 <body>
+    <header id="main-header"> 
+        <div class="container">     
+          <h1> Breweries Order App</h1>
+        </div>
+   </header>
  
-    <h2> Breweries Order App</h2>
+  <div class="container-1"> 
+    <div id="company-box">
      <h2>Filter by Company:</h2>
-    <div id='com-container'></div>
+       <div id='com-container'> 
+       </div>
+      </div>  
+  </div>  
+
+ <div class="container-2"> 
+   <div id="order-box"> 
     <h2>Here are all the Orders Beer:</h2>
-    <ul id='orders-container'></ul>
-      <h2>Create Order</h2>
-    <form id="order-form">
+   <div><ul id='orders-container'></ul></div>
+  </div>  
+ </div> 
+ 
+ <div class="my-form">    
+         <h2>Create a New Order</h2>
+     <form id="order-form">
+           <div class="form-group">
             <label for="order-name">Name:</label><br>
             <input type="text" name="name" id="order-name"/></br>
+          </div>
+
+          <div class="form-group">
             <label for="order-amount">Amount:</label><br>
             <input type="number" name="amount" id="order-amount"/></br>
+          </div>
+
+             <div class="form-group">    
             <label for="order-price">Price:</label><br>
             <input type="number" name="price" id="order-price" min="0" step="0.01"><br><br>
-            
+          </div>
 
-            <label for="company-dropdown">Company Name:</label>
+          <div class="form-group">
+            <label for="company-dropdown">Select Company Name:</label>
             <select name="company_id" id="company-dropDown"></select><br/><br/>
-            
+          </div>
+
+            <div class="form-group">
             <label for="company-Name">Company Name: </label>
             <input type="text" name="name" id="company-name"/><br/>
-            <input type="submit" value="Create Order"/>
-        </form>
+          </div>
+
+            <input class="button" type="submit" value="Create Order"/>
+     </form>
+ </div> 
+ <footer id="main-footer">
+  <p>Copyright &copy; 2021 Breweries App Website</p>
+</footer>
+<div style="margin-top: 100px;"></div>
+
 </body>
 </html>
 
