@@ -1,6 +1,6 @@
 
 body {
-  background-color:#cad1d1;
+  background-color:hsl(36, 90%, 52%);
   color:rgb(55, 56, 52);
   font-family:Arial, Helvetica, sans-serif;
   font-size:16px;
@@ -10,7 +10,7 @@ body {
 }
 
 #main-header{
-  background-color:coral;
+  background-color:rgb(52, 138, 49);
   color:#fff;
 }
 
@@ -98,7 +98,7 @@ body {
     margin: auto;
     margin-top: 10px;
    /* background-image: url('images/pngtree-a-glass-of-fresh-beer-png-image_2696071');  */
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-position: 50px 100px;
     background-position: center top;
 }
@@ -123,123 +123,3 @@ body {
     padding: 20px;
     margin-top: 40px;
 } 
-@keyframes TackyGradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }  
-
-  
-  /* background: linear-gradient(200deg, rgb(245, 238, 53), hsl(58, 87%, 56%));
-  background-size: 600% 600%;
-  background-attachment: fixed;
-  height: 100%;
-  min-height: 100%;
-  animation: TackyGradient 12s ease infinite; */ 
-
- /* html {
-    background: linear-gradient(200deg, rgb(245, 238, 53), hsl(58, 87%, 56%));
-    background-size: 600% 600%;
-    background-attachment: fixed;
-    height: 100%;
-    min-height: 100%;
-    animation: TackyGradient 12s ease infinite;
-  }
-  html * {
-     font-family: sans-serif !important;
-  }
-  
-  #comments {
-    margin: 25px auto;
-    padding: 20px;
-    width: 500px;
-    height: auto;
-    background-color: rgb(245, 245, 250);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-  
-  .comment {
-    width: 100%;
-    display: grid;
-  }
-  
-  .field {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 75% 25%;
-  }
-  
-  button {
-    background-color: white;
-    border-radius: 0px 5px 5px 0px;
-    border: 1px solid rgb(40, 160, 230);
-    color: rgb(15, 40, 23);
-    padding: 10px 20px;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-  }
-  
-  .activated {
-    background-color:rgb(241, 220, 24);
-    border-radius: 0px 5px 5px 0px;
-    border: 1px solid;
-    color: white;
-  }
-  
-  .btn:hover {
-    background-color: rgb(230, 240, 250);
-  }
-  
-  input[type="text"] {
-    padding: 10px 20px;
-    border-radius: 5px 0px 0px 5px;
-    border: 1px solid rgb(220, 225, 230);
-    font-size: 16px;
-  }
-  
-  input:focus {
-    outline: none;
-  }
-
-  
-   /* @keyframes TackyGradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }  
-  .beer-image {
-  justify-self: center;
-  height: 12rem;
-  width: auto;
-  background-image:url('../brewery/pngtree-a-glass-of-fresh-beer-png-image_2696071');
-} 
-
- 
-
-/* body {
-    background-color: #ffcc00;
-    bacground-image:url('../brewery/pngtree-a-glass-of-fresh-beer-png-image_2696071');
-
-} 
-.activated {
-  background-color:rgb(40, 160, 230);
-  border-radius: 0px 5px 5px 0px;
-  border: 1px solid;
-  color: white;
-} */  

@@ -1,6 +1,7 @@
 const port = `http://localhost:3000`;
 const orderCall = new OrderService(port);
 const companyCall = new CompanyService(port);
+const comNameValue = document.getElementById("company-name")
 const dropDown = document.getElementById("company-dropDown");
  
 const ul = document.getElementById('order-list');
@@ -11,7 +12,7 @@ const nameValue = document.getElementById('order-name');
 const amountValue = document.getElementById('order-amount');
 const priceValue = document.getElementById('order-price');
 
-const comNameValue = document.getElementById("company-name")
+
 //const companyValue = document.getElementById("company-name")
 orderCall.getOrders()
 companyCall.getCompanies()

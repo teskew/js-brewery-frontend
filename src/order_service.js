@@ -3,18 +3,18 @@ class OrderService {
           this.port = port
     }
 
-      getOrders(){
-           fetch(this.port + `/orders`)
-          .then(response => response.json())
-          .then(json => {
+    getOrders() {
+        fetch(this.port + `/orders`)
+        .then(response => response.json())
+        .then(json => {
+          //debugger
             for(const order of json.data) {
-                let o = new Order({id: order.id, ...order.attributes})
-                //debugger
-                 o.attachToDom()
-
-              }
-          })   
-      }
+               let o = new Order({id: order.id, ...order.attributes})
+              
+               o.attachToDom()
+            }
+        })
+    }
 
     createOrders(){
        const orderInfo = {
@@ -36,11 +36,14 @@ class OrderService {
             body: JSON.stringify(orderInfo)
         }
 
-        fetch(this.port + `/orders`, configObject)
+        fetch(this.port + `/orders`, configObject)  
+
         .then(response => response.json())
         .then(json => {
-           let o = new Order({id: json.data.id, ...json.data.attributes})
-           const findCom = Company.all.find(c => parseInt(c.id) === o.companyId)
+            
+            let o = new Order({id: json.data.id, ...json.data.attributes})
+        
+            const findCom = Company.all.find(c => parseInt(c.id) === o.companyId)
         
         if(!findCom) {
             const comObj = new Company({
@@ -78,7 +81,7 @@ class OrderService {
   deleteOrder(e){
       const id = e.target.dataset.id
       e.target.parentElement.remove()
-      fetch(`${this.port}/orders/${id}`, {method: 'DELETE'})
+      fetch(`${this.port}/orders${id}`, {method: 'DELETE'})
       .then(response => response.json())
       .then(json => alert(json.message))
   }

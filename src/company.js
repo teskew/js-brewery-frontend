@@ -17,7 +17,7 @@ class Company{
 
     render() {
         this.element.innerText = this.name       
-        this.element.id = `company-${this.id}`
+        this.element.id =  `company-${this.id}`
         return this.element
     }
 

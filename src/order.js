@@ -1,13 +1,13 @@
 class Order{
     static all = [];
     static ordersContainer= document.getElementById('orders-container')
-    constructor({name, id, amount, price, company_id }){
+    constructor({name, id, amount, price, company_id, company }){
        this.name = name
        this.id = id
        this.amount = amount
        this.price = price
        this.companyId = company_id
-
+       this.company = company
        this.element = document.createElement('li');
        this.element.dataset['id'] = id;
        this.element.id = `order-${id}`;
